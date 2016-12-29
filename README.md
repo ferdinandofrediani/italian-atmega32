@@ -1,6 +1,7 @@
 ## Atmega32
 
-Benevenuto sulla guida italiana dell'atmega32, verranno spiegate le parti salienti che permettono la programmazione dell'atmega32 con qualche codice esempio in Assembly e in C .
+Benevenuto sulla guida italiana del microcontrollore atmega32, verranno spiegate le parti salienti che permettono la programmazione dell'atmega32 con qualche codice esempio in Assembly e in C .
+La funziona della guida è quella di aiutare un utente alla scoperta del microcontrollore e dunque non si sostituisce ad alcun documento tecnico rilasciato da ATMEL .
 
 ### Markdown
 
