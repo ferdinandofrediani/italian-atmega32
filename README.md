@@ -3,9 +3,10 @@
 Benevenuto sulla guida italiana del microcontrollore **ATMEGA32**, verranno spiegate le parti salienti che permettono la programmazione dell'atmega32 con qualche codice esempio in **Assembly** e in **C** .
 La funziona della guida è quella di aiutare un utente alla scoperta del microcontrollore e dunque non si sostituisce ad alcun documento tecnico rilasciato da **ATMEL** .
 
-### Markdown
+### Panoramica del microcontrollore
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Il microcontrollore è basato su un architettura RISC.
+E' composto da 32 registri a 8 bit tutti collegati direttamente alla ALU , 32 KB di flash programmabile , 1024 Bytes di EEPROM 2 KB di SRAM più una miriade di componenti che servono ad interfacciarci con il mondo esterno (ad esempio : A/D converter , TimerCounter , chi più ne ha più ne metta , etcc ) che vedremo step by step successivamente .
 
 ```markdown
 Syntax highlighted code block
