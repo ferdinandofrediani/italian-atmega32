@@ -17,4 +17,6 @@ Le istruzioni aritmetiche che vengono eseguite in 2 cicli di clock sono quelle c
 
 sbiw r25:r24,1 ; sottrae 1 dalla coppia di registri r25 e r24
 
+;impiega 2 clicli di clock
+
 ```
