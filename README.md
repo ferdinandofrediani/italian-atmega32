@@ -1,8 +1,6 @@
-## Welcome to GitHub Pages
+## Atmega32
 
-You can use the [editor on GitHub](https://github.com/ferdinandofrediani/italian-atmega32/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Benevenuto sulla guida italiana dell'atmega32, verranno spiegate le parti salienti che permettono la programmazione dell'atmega32 con qualche codice esempio in Assembly e in C .
 
 ### Markdown
 
