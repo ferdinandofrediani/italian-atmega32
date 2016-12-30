@@ -14,6 +14,7 @@ E' composto da **32 registri** a 8 bit tutti collegati direttamente alla **ALU**
 
 I 32 registri sono collegate direttamente alla **ALU** , questo permette che gran parte delle istruzioni aritmetche siano eseguite in un unico ciclo di **clock** .
 Le istruzioni aritmetiche che vengono eseguite in 2 cicli di clock sono quelle che utilizzano operandi o coppie di registri per un totale di 16 bit, ad esempio l'istruzione SBIW :
+
 ```
 ;questo è un commento in assembly
 
