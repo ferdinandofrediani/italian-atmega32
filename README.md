@@ -23,6 +23,7 @@ sbiw r25:r24,1 ; sottrae 1 dalla coppia di registri r25 e r24
 ;impiega 2 clicli di clock
 
 ```
+
 ### Lo Status Register
 
 Lo status register **(SREG)** è un registro di fondamentale importanza del microcontrollore che ci permette di visualizzare il risultato dell' **ultima**  **operazione aritmetica**. Conoscere il risultato di un informazione ci permette di modificare eventualmente il **flusso di programma** . Lo status register è aggiornato dopo ogni operazione della **ALU** .
