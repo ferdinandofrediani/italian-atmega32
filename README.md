@@ -30,10 +30,13 @@ Lo status register **(SREG)** è un registro di fondamentale importanza del micr
 SREG è composto da 8 bit :  
 
 ```
+
 I : bit che attiva gli interrupt
 
 T : le istruzionni BLD e BST usano questo bit come bit di risorsa o destinazione per copiare bit da un **Register File**
 
 H : indica un half carry in operazioni aritmetiche 
 
+
+```
 
