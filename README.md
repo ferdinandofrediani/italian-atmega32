@@ -5,7 +5,7 @@ La funziona della guida è quella di aiutare un utente alla scoperta del microco
 
 ### Panoramica del microcontrollore
 
-Il microcontrollore è basato su un architettura RISC.
+Il microcontrollore è basato su un architettura di tipo **RISC**.
 E' composto da **32 registri** a 8 bit tutti collegati direttamente alla **ALU** , 32 KB di **flash programmabile** , 1024 Bytes di **EEPROM** 2 KB di **SRAM** più una miriade di componenti che servono ad interfacciarci con il mondo esterno (ad esempio : A/D converter , TimerCounter , chi più ne ha più ne metta , etcc ) che vedremo step by step successivamente .
 
 ## AVR CPU Core
@@ -37,6 +37,15 @@ T : le istruzionni BLD e BST usano questo bit come bit di risorsa o destinazione
 
 H : indica un half carry in operazioni aritmetiche 
 
+S : flag di segno
+
+V : presenza di un overflow in complemento a due
+
+Z : Zero flag
+
+C : Indica un carry che avviene in un operazione aritmetica o logica
 
 ```
+Sul **8 bit Avr Instruction Set** del Atmel troviamo tutte le istruzioni in assembly supportate dal microcontrollore con la descrizione , per ogni istruzione, delle eventuali modifiche del **SREG**
+
 
