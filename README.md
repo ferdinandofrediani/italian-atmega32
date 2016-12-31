@@ -55,6 +55,8 @@ Come dicono le parole “general purpose” , tutti i 32 registri sono per  oper
 Però non possiamo usare **indistintamente** tutti i 32 registri con tutte le istruzioni dell’AVR.
 Facciamo un esempio:
 Una delle istruzioni più usate come la LDI ovvero la Load Immediate funziona solamente dal registro r16 al registro r31.
+
+
 ```
 
 ;La LDI 
@@ -64,4 +66,13 @@ ldi r17, 0x05 ; carichiamo il 0x05 nel registro R17
 ```
 
 Nei registri R0 e R1 vengono caricati i risultati delle moltiplicazione e in alcune istruzioni (come la **LPM** ) viene usato R0 come registro di riferimento .
+I registri da **R26 a R31** sono dei registri di particolare importanza, poichè le coppie di registri 
 
+```
+X -> R26 : R27
+Y -> R28 : R29
+Z -> R30 : R31
+
+```
+
+permettono di essere utilizzati come registri a **16 bit** . Essendo ogni indirizzo di memoria è a **16 bit** , utilizzando queste coppie di registri possiamo scrivere all'interno di uno dei tre puntatori (X,Y,Z) l'indirizzo di una cella di memoria di nostro interesse. Vediamo un esempio :
