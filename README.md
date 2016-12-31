@@ -13,6 +13,7 @@ E' composto da **32 registri** a 8 bit tutti collegati direttamente alla **ALU**
 ### La ALU e le operazioni
 
 I 32 registri sono collegate direttamente alla **ALU** , questo permette che gran parte delle istruzioni aritmetche siano eseguite in un unico ciclo di **clock** .
+Inoltre il processore fa operazioni in little endian.
 Le istruzioni aritmetiche che vengono eseguite in 2 cicli di clock sono quelle che utilizzano operandi o coppie di registri per un totale di 16 bit, ad esempio l'istruzione SBIW :
 
 ```
@@ -48,4 +49,19 @@ C : Indica un carry che avviene in un operazione aritmetica o logica
 ```
 Sul **8 bit Avr Instruction Set** del Atmel troviamo tutte le istruzioni in assembly supportate dal microcontrollore con la descrizione , per ogni istruzione, delle eventuali modifiche del **SREG**
 
+### Registri per uso generale
+Il nostro microcontrollore ha ben **32 general purpose** registrers da **8** bit ciascuno.
+Come dicono le parole “general purpose” , tutti i 32 registri sono per  operazioni di “**uso generico**” come un calcolo aritmetico o lo spostamento di eventuali dati dalla memoria alla flash etc..
+Però non possiamo usare **indistintamente** tutti i 32 registri con tutte le istruzioni dell’AVR.
+Facciamo un esempio:
+Una delle istruzioni più usate come la LDI ovvero la Load Immediate funziona solamente dal registro r16 al registro r31.
+```
+
+;La LDI 
+
+ldi r17, 0x05 ; carichiamo il 0x05 nel registro R17
+
+```
+
+Nei registri R0 e R1 vengono caricati i risultati delle moltiplicazione e in alcune istruzioni (come la **LPM** ) viene usato R0 come registro di riferimento .
 
