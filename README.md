@@ -75,4 +75,16 @@ Z -> R30 : R31
 
 ```
 
-permettono di essere utilizzati come registri a **16 bit** . Essendo ogni indirizzo di memoria è a **16 bit** , utilizzando queste coppie di registri possiamo scrivere all'interno di uno dei tre puntatori (X,Y,Z) l'indirizzo di una cella di memoria di nostro interesse. Vediamo un esempio :
+permettono di essere utilizzati come registri a **16 bit** . Essendo ogni indirizzo di memoria a **16 bit** , utilizzando queste coppie di registri possiamo scrivere all'interno di uno dei tre puntatori (X,Y,Z) l'indirizzo di una cella di memoria di nostro interesse. Vediamo un esempio :
+
+```
+;sia all'indirizzo in ram 0x6A un dato di nostro interesse
+;vogliamo dunque prelevarlo
+
+ldi XL , low(0x6A) ;carichiamo la parte bassa dell'indirizzo in XL
+ldi XH , high(0x6A) ; carichiamo la parte alta dell'indirizzo in XH
+ld r17, X ; carichiamo il valore in memoria alla locazione 0x6A in r17
+
+```
+L'utilizzo di questi registri è molto utile soprattutto quando dobbiamo inserire o prelevare ad esempio in **memoria** dati in locazioni *consecutive*.
+
