@@ -86,5 +86,22 @@ ldi XH , high(0x6A) ; carichiamo la parte alta dell'indirizzo in XH
 ld r17, X ; carichiamo il valore in memoria alla locazione 0x6A in r17
 
 ```
+
 L'utilizzo di questi registri è molto utile soprattutto quando dobbiamo inserire o prelevare ad esempio in **memoria** dati in locazioni *consecutive*.
 
+**Attenzione !**
+Non è necessariamente detto che l' *assemblamento* vada a buon fine se vengono utilizzati i *sinonimi* XL , XH (etc..) al posto dei nomi *veri* dei registri .
+*XL e XH , YL e YH , ZL e ZH* sono infatti delle **EQU** : La .EQU è una direttiva del assembly del nostro microcontrollore che permette di assegnare un valore ad una **label** , ad esempio : 
+
+```
+.EQU miaLocazione = 0x75 ;assegno alla label miaLocazione il valore 0x75
+ldi r16 , low(miaLocazione) ;posso riutilizzare miaLocazione all'interno del codice
+ldi r17 , high(miaLocazione)
+
+```
+
+Consiglio di leggere approfinditamente il manuale **AVR Assembler User Guide** del **ATMEL** dove vengono definite le varie *direttive* con le regole per essere utilizzate .
+
+### Lo stack Pointer 
+
+Lo stack Pointer è un altro registro di fondementale importanza . Per *Stack* ci riferiamo a quella porsione di memoria in *RAM* dove allochiamo dati generalmente temporanei come ad esempio **variabili locali** o indirizzi di ritorno da una chiamata ad una subroutine o **Interrupt** .
