@@ -91,7 +91,7 @@ L'utilizzo di questi registri è molto utile soprattutto quando dobbiamo inserir
 
 **Attenzione !**
 Non è necessariamente detto che l' *assemblamento* vada a buon fine se vengono utilizzati i *sinonimi* XL , XH (etc..) al posto dei nomi *veri* dei registri .
-*XL e XH , YL e YH , ZL e ZH* sono infatti delle **EQU** : La .EQU è una direttiva del assembly del nostro microcontrollore che permette di assegnare un valore ad una **label** , ad esempio : 
+*XL e XH , YL e YH , ZL e ZH* sono infatti delle **EQU** e quindi devono essere definite nel nostro codice o in un file esterno incluso nel codice : La .EQU è una direttiva del assembly del nostro microcontrollore che permette di assegnare un valore ad una **label** , ad esempio : 
 
 ```
 .EQU miaLocazione = 0x75 ;assegno alla label miaLocazione il valore 0x75
